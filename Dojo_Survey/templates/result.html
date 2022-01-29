@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container-md container rounded mt-3 pb-3 pt-3 d-grid justify-content-center">
+    <div class="d-grid bg-secondary p-5 container rounded">
+        <h3 class="text-warning text-center d-inline-block">{{session['name']}}</h3>
+        <h5 class="text-light d-inlineblock">Location: <p class="text-warning">{{session['location']}}</p>
+        </h5>
+        <h5 class="text-light d-inlineblock">Language: <p class="text-warning">{{session['language']}}</p>
+        </h5>
+        <h5 class="text-light d-inlineblock">Comments: <p class="text-warning">{{session['comments']}}</p>
+        </h5>
+        <h5 class="text-light d-inlineblock">Entered Contest: <p class="text-warning">{{session['contest']}}</p>
+        </h5>
+
+        <!-- {% if 'subscribe'in session %}
+
+        <h5 class="text-light d-inlineblock">Subscrided: <p class="text-warning">Yes</p>
+        </h5>
+
+        {% else %}
+        <h5 class="text-light d-inlineblock">Subscrided: <p class="text-warning">No</p>
+        </h5>
+        {% endif %} -->
+
+        <hr>
+        <a href="/" class="text-white-50">Redo Form</a>
+
+        <a href="/" class="text-white-50 ">Confirm Submission</a>
+
+    </div>
+
+
+</div>
+
+{% endblock %}

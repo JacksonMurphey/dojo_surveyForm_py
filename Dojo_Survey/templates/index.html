@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title%}Dojo Survey{% endblock %}
+
+{% block content %}
+<div class="container-md container rounded mt-3 pb-3 pt-3 d-grid justify-content-center">
+    <div class="d-grid bg-secondary p-5 container rounded">
+        <h3 class="text-light text-center d-inline-block">Dojo Survey</h3>
+        <form action="/user_info" method="POST">
+            <label for="name" class="text-light">Name:</label>
+            <input type="text" class="form-control" name="name">
+            <label for="location" class="text-light pt-2">Location</label>
+            <select name="location" class="form-select" aria-label="Default select example">
+                <option selected>--Select a Location--</option>
+                <option value="Chicago">Chicago</option>
+                <option value="Burbank">Burbank</option>
+                <option value="Seattle">Seattle</option>
+            </select>
+            <label for="language" class="text-light pt-2">Favorite Language</label>
+            <select name="language" class="form-select" aria-label="Default select example">
+                <option selected>--Select a Language--</option>
+                <option value="Python">Python</option>
+                <option value="Javascript">Javascript</option>
+                <option value="CSS">CSS</option>
+                <option value="HTML">HTML</option>
+            </select>
+            <label for="comments" class="text-light d-block mt-2">Comments:</label>
+            <textarea name="comments" id="" cols="65" rows="4"></textarea>
+
+            <label for="contest" class="text-warning d-block pb-1 pt-2">Enter Contest:</label>
+
+            <input type="radio" id="yes" name='contest' value='yes'>
+            <label for="yes" class="text-light pb-2 ">Yes</label>
+
+            <input type="radio" id="no" name='contest' value='no'>
+            <label for="no" class="text-light">No</label>
+            <div>
+                <input type="checkbox" class="text-light d-inline-block mb-3 mt-5" id='subscribe' name='subscribe'>
+                <label for="subscribe" class="text-light">If you would like to sign-up for updates and newletters please
+                    check-box</label>
+            </div>
+            <input type="submit" value="Submit" class="btn btn-primary d-block">
+        </form>
+    </div>
+</div>
+
+{% endblock %}
